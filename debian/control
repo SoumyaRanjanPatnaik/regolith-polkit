@@ -4,11 +4,20 @@ Maintainer: Soumya Ranjan Patnaik <soumyaranjan1812@gmail.com>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
- mate-common
+ mate-common,
+ libglib2.0-dev,
+ libgtk-3-dev,
+ libpolkit-agent-1-dev
 Standards-Version: 4.6.1
 
 Package: regolith-mate-polkit
-Architecture: all
+Architecture: any
+Provides: polkit-1-auth-agent
+Conflicts: polkit-1-auth-agent, policykit-1-gnome, mate-polkit, mate-polkit-common
+Replaces: polkit-1-auth-agent, policykit-1-gnome, mate-polkit, mate-polkit-common
 Depends:
  ${misc:Depends},
+ libglib2.0-0,
+ libgtk-3-dev,
+ libpolkit-agent-1-0
 Description: Mate polkit agent packaged for better wayland support.
