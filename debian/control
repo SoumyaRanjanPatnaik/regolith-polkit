@@ -1,0 +1,14 @@
+Source: regolith-mate-polkit
+Priority: medium
+Maintainer: Soumya Ranjan Patnaik <soumyaranjan1812@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ mate-common
+Standards-Version: 4.6.1
+
+Package: regolith-mate-polkit
+Architecture: all
+Depends:
+ ${misc:Depends},
+Description: Mate polkit agent packaged for better wayland support.
